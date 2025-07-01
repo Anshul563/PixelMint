@@ -41,11 +41,13 @@ export default function ClientSayPage() {
 					{testimonials.map((t, i) => (
 						<motion.div
 							key={i}
-							className="bg-grayDark bg-opacity-40 backdrop-blur-md p-6 rounded-xl shadow-lg border border-gray-700"
-							initial={{ opacity: 0, y: 30 }}
-							whileInView={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.6, delay: i * 0.2 }}
-							viewport={{ once: true }}
+							{...{
+								className: "bg-grayDark bg-opacity-40 backdrop-blur-md p-6 rounded-xl shadow-lg border border-gray-700",
+								initial: { opacity: 0, y: 30 },
+								whileInView: { opacity: 1, y: 0 },
+								transition: { duration: 0.6, delay: i * 0.2 },
+								viewport: { once: true }
+							}}
 						>
 							<div className="mb-4">
 								<h3 className="font-semibold text-white">{t.name}</h3>

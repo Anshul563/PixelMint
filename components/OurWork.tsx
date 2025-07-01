@@ -27,13 +27,15 @@ const projects = [
   },
 ]
 
-const cardVariants = {
+import type { Variants } from 'framer-motion'
+
+const cardVariants: Variants = {
   offscreen: { opacity: 0, y: 60, scale: 0.95 },
   onscreen: {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { type: 'spring', bounce: 0.3, duration: 0.9 },
+    transition: { type: 'spring' as const, bounce: 0.3, duration: 0.9 },
   },
 }
 

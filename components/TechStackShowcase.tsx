@@ -33,7 +33,7 @@ const gridVariants = {
 
 const cardVariants = {
   hidden: { opacity: 0, y: 30, scale: 0.9 },
-  visible: { opacity: 1, y: 0, scale: 1, transition: { type: 'spring', stiffness: 120 } },
+  visible: { opacity: 1, y: 0, scale: 1, transition: { type: 'spring' as const, stiffness: 120 } },
   exit: { opacity: 0, y: 30, scale: 0.9, transition: { duration: 0.2 } },
 }
 
@@ -48,15 +48,16 @@ export default function TechStackShowcase() {
   return (
     <section className="bg-dark text-white py-20 px-6">
       <div className="max-w-6xl mx-auto text-center">
-        <motion.h2
-          className="text-3xl sm:text-4xl font-bold text-mint mb-4"
+        <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          Our Tech Stack
-        </motion.h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-mint mb-4">
+            Our Tech Stack
+          </h2>
+        </motion.div>
         <p className="text-gray-400 mb-10">Explore the tools we use daily.</p>
 
         {/* Tabs */}

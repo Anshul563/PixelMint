@@ -39,7 +39,9 @@ const services = [
   },
 ]
 
-const cardVariants = {
+import type { Variants } from 'framer-motion'
+
+const cardVariants: Variants = {
   offscreen: { opacity: 0, y: 40, scale: 0.95 },
   onscreen: {
     opacity: 1,
