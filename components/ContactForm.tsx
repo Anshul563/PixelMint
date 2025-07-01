@@ -12,24 +12,24 @@ export default function ContactPage() {
     }
 
     const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault()
+    e.preventDefault()
 
-        emailjs
-            .send(
-                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-                formData,
-                process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
-            )
-            .then(() => {
-                alert('✅ Message sent successfully!')
-                setFormData({ name: '', email: '', mobile: '', message: '' })
-            })
-            .catch((err) => {
-                console.error(err)
-                alert('❌ Failed to send message. Try again.')
-            })
-    }
+    emailjs
+        .send(
+            'service_io1lkhg', // replace with your actual service ID
+            'template_o9t57jc', // replace with your actual template ID
+            formData,
+            '-4vqO-h_iQP_YblRC' // replace with your actual public key
+        )
+        .then(() => {
+            alert('✅ Message sent successfully!')
+            setFormData({ name: '', email: '', mobile: '', message: '' })
+        })
+        .catch((err) => {
+            console.error(err)
+            alert('❌ Failed to send message. Try again.')
+        })
+}
 
     return (
         <div className="min-h-screen flex items-center justify-center text-white">
