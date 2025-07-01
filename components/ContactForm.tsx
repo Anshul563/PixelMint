@@ -28,9 +28,9 @@ export default function ContactPage() {
                 setFormData({ name: '', email: '', mobile: '', message: '' })
             })
             .catch((err) => {
-                console.error(err)
-                alert('❌ Failed to send message. Try again.')
-            })
+    console.error("EmailJS Error:", err)
+    alert('❌ Failed to send message. Try again.')
+})
             .finally(() => setLoading(false))
     }
 
