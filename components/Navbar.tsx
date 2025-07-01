@@ -45,9 +45,7 @@ export default function Navbar() {
           <Link href="/" className="hover:text-mint text-gray-300 transition" onClick={() => setMenuOpen(false)}>Home</Link>
           <Link href="#services" className="hover:text-mint text-gray-300 transition" onClick={() => setMenuOpen(false)}>Services</Link>
           <Link href="/contact" className="hover:text-mint text-gray-300 transition" onClick={() => setMenuOpen(false)}>Contact</Link>
-          <Link href="/login" className="bg-mint hover:bg-neon text-black px-6 py-2 font-semibold rounded-full transition" onClick={() => setMenuOpen(false)}>
-            Login
-          </Link>
+          
         </div>
       )}
     </nav>
